@@ -1,4 +1,4 @@
-# sp_color_rain_open
+# Color Rain
 Simple mobile game
 
 This project was build in Qt Creator 5.8 beta for Linux and Mac OS X El Capitan.
