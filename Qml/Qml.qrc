@@ -1,0 +1,17 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Root.qml</file>
+        <file>Consts.qml</file>
+        <file>qmldir</file>
+        <file>ControlPanel.qml</file>
+        <file>ColorPlatform.qml</file>
+        <file>Field.qml</file>
+        <file>Droplet.qml</file>
+        <file>LevelCaption.qml</file>
+        <file>GameOverPopup.qml</file>
+        <file>StartScreen.qml</file>
+        <file>PauseButton.qml</file>
+        <file>LevelsModel.qml</file>
+        <file>DropletGenerator.qml</file>
+    </qresource>
+</RCC>
