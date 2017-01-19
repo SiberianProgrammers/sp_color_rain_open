@@ -1,9 +1,8 @@
 import QtQuick 2.8
+import SP 1.0
 import "./"
+import "qrc:/SpQml"
 
-//--------------------------------------------------------------------------
-// Элемент-капля. При создании запускается анимация падения
-//--------------------------------------------------------------------------
 Rectangle {
     id: _droplet
     
@@ -17,8 +16,6 @@ Rectangle {
     radius: 0.5*width
     color: colors[colorIndex]
     
-    //--------------------------------------------------------------------------
-    // Анимация падения
     //--------------------------------------------------------------------------
     NumberAnimation {
         id: fallingAnimation
@@ -38,6 +35,7 @@ Rectangle {
         
         onStopped: {
             if (colorPlatform.colorIndex(_droplet.columnIndex) === _droplet.colorIndex) {
+                //Log.aleus("Ням-Ням");
                 lastDropletColorIndex = colorIndex;
                 ++score;
                 if (score > maxScore) {
@@ -47,13 +45,12 @@ Rectangle {
 
                 kill();
             } else {
+                //Log.aleus("Ба-Бах");
                 gameOver();
             }
-        } // onStopped: {
-    } // NumberAnimation { id: fallingAnimation
+        }
+    } // NumberAnimation {
 
-    //--------------------------------------------------------------------------
-    // Анимация "смерти" капли.
     //--------------------------------------------------------------------------
     ParallelAnimation {
         id: deathAnimation
@@ -78,7 +75,7 @@ Rectangle {
         onStopped: {
             _droplet.destroy();
         }
-    } // ParallelAnimation { id: deathAnimation
+    }
 
     //--------------------------------------------------------------------------
     function kill() {
@@ -117,7 +114,6 @@ Rectangle {
         ++dropletsInFly;
     }
 
-    //--------------------------------------------------------------------------
     Component.onDestruction: {
         --dropletsInFly;
     }

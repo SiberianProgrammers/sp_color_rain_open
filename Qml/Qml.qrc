@@ -11,7 +11,5 @@
         <file>GameOverPopup.qml</file>
         <file>StartScreen.qml</file>
         <file>PauseButton.qml</file>
-        <file>LevelsModel.qml</file>
-        <file>DropletGenerator.qml</file>
     </qresource>
 </RCC>

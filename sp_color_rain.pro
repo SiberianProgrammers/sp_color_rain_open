@@ -1,21 +1,27 @@
 TEMPLATE = app
 
-QT += qml quick
+QT += qml quick widgets
 CONFIG += c++11
 
+include(Programmer.pri)
 include(Deployment.pri)
+include(sp_qt_libs/sp_qt_libs.pri)
 
 INCLUDEPATH += Include
 HEADERS += \
-    Include/Settings.h
+    Include/SpApplication.h \
+    Include/JniSetup.h \
+    Include/Consts.h
 
-SOURCES += \
-    Source/Main.cpp \
-    Source/Settings.cpp
+SOURCES += Source/Main.cpp \
+    Source/SpApplication.cpp \
+    Source/JniSetup.cpp
 
 RESOURCES += \
     $$PWD/Qml/Qml.qrc \
-    $$PWD/Audio/Audio.qrc
+    Images/Images.qrc \
+    Fonts/Fonts.qrc \
+    Audio/Audio.qrc
 
 android {
     QT += androidextras
@@ -28,7 +34,8 @@ android {
         Android/build.gradle \
         Android/gradle/wrapper/gradle-wrapper.properties \
         Android/gradlew.bat \
-        Android/src/com/sp/colorrain/ColorRainActivity.java
+        Android/src/com/sp/colorrain/SpProjectPrototypeActivity.java \
+        Android/src/com/sp/colorrain/SplashActivity.java
 
     ANDROID_PACKAGE_SOURCE_DIR = $$PWD/Android
 }

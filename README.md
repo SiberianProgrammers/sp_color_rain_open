@@ -1,5 +1,11 @@
-# sp_color_rain_open
-Simple mobile game
+# README #
 
-This project was build in Qt Creator 5.8 beta for Linux and Mac OS X El Capitan.
-For Android build Android-sdk-23 and android-ndk-r13 were used. There was npt testing for other version of android-sdk and android-ndk.
+Игра. Нужно подставлять под шарики соответсвующие цвета. Одна ошибка и игра окончена. ;)
+
+Для клонирования используйте следующую команду:
+
+```
+#!bash
+
+git clone --recursive git@bitbucket.org:siberian_programmers/sp_color_rain.git
+```

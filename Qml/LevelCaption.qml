@@ -1,9 +1,8 @@
 import QtQuick 2.8
+import SP 1.0
 import "./"
+import "qrc:/SpQml"
 
-//--------------------------------------------------------------------------
-// Табличка с текущим уровнем
-//--------------------------------------------------------------------------
 Rectangle {
     id: _levelCaption
     
@@ -70,7 +69,7 @@ Rectangle {
             rightMargin: -_field.width + _levelCaption.width + textItem.anchors.leftMargin
             bottomMargin: 0.5*(originalHeight - height)
         }
-    } // Text { id: scoreItem
+    }
 
     //--------------------------------------------------------------------------
     Text {
@@ -92,7 +91,7 @@ Rectangle {
             horizontalCenter: parent.horizontalCenter
         }
         width: _field.width - 2*Consts.margin
-    } // Text { id: descriptionItem
+    }
 
     //--------------------------------------------------------------------------
     Item {

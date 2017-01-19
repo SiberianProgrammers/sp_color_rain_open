@@ -1,10 +1,12 @@
 import QtQuick 2.8
+import SP 1.0
 import "./"
+import "qrc:/SpQml"
 
 Item {
     id: _gameOverPopup
 
-    width: Math.max(captionItem.width, scoreItem.width) + 2*Consts.marginBig
+    width: Math.max(textItem.width, scoreItem.width) + 2*Consts.marginBig
     height: column.height + 2*Consts.marginBig
     anchors.centerIn: parent
 
@@ -48,9 +50,8 @@ Item {
             verticalCenter: parent.verticalCenter
         }
 
-        //--------------------------------------------------------------------------
         Text {
-            id: captionItem
+            id: textItem
 
             text: "Game Over!"
             anchors.horizontalCenter: parent.horizontalCenter
@@ -59,9 +60,8 @@ Item {
                 pixelSize: 1*Consts.ruh
                 bold: true
             }
-        } // Text: id: captionItem
+        }
 
-        //--------------------------------------------------------------------------
         Text {
             id: scoreItem
 
@@ -73,9 +73,8 @@ Item {
                 pixelSize: 1*Consts.ruh
                 bold: true
             }
-        } // Text { id: scoreItem
+        }
 
-        //--------------------------------------------------------------------------
         Rectangle {
             id: button
 
@@ -100,9 +99,9 @@ Item {
                 anchors.fill: parent
                 onClicked: {
                     hide();
-                    field.newGame();
+                    field.startGame();
                 }
-            } // MouseArea {
+            }
         } // Rectangle { id: button
     } // Column {
 

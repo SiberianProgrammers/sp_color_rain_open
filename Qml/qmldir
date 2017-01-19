@@ -1,2 +1,2 @@
-module SP
+module DirectXaoc
 singleton Consts 1.0 Consts.qml

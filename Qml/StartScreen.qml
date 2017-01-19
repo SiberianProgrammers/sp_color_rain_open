@@ -1,5 +1,7 @@
 import QtQuick 2.8
+import SP 1.0
 import "./"
+import "qrc:/SpQml"
 
 Rectangle {
     id: _startScreen
