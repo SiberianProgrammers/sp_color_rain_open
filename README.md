@@ -1,11 +1,6 @@
-# README #
+# Color Rain
+Simple mobile game
 
-Игра. Нужно подставлять под шарики соответсвующие цвета. Одна ошибка и игра окончена. ;)
+This project was build in Qt Creator 5.8 beta for Linux and Mac.
 
-Для клонирования используйте следующую команду:
-
-```
-#!bash
-
-git clone --recursive git@bitbucket.org:siberian_programmers/sp_color_rain.git
-```
+For Android build Android-sdk-23 and android-ndk-r13 were used. There was not testing for other version of android-sdk and android-ndk.
